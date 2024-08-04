@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Question 6 Slider </title>
+    <style>
+        img{
+            height: 100%;
+            width: 100%;
+            display: none;
+        }
+
+        .main{
+            height: 600px;
+            width: 80%;
+            margin: 50px auto;
+            border: 5px solid;
+        }
+    </style>
+</head>
+<body>
+  <div class="main">
+    <img src="../image/image 1.jpg"  alt="" class="slider">
+    <img src="../image/image 2.jpg"  alt="" class="slider">
+    <img src="../image/image 3.jpg"  alt="" class="slider">
+    <img src="../image/image 4.jpg"  alt="" class="slider">
+  </div>
+  <script>
+   
+    let image=document.querySelectorAll(".slider");
+  
+    let count=0;
+    function slideshow()
+    {
+        for(let i=0;i<image.length;i++)
+        {
+            image[i].style.display="none";
+        }
+        if(count>=image.length)
+        {
+            count=0;
+        }
+        image[count].style.display="block";
+        count++;
+    }
+    slideshow();
+    setInterval(slideshow, 2500); 
+  </script>
+</body>
+</html>

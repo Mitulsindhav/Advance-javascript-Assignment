@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Que-1 Hide Show password </title>
+</head>
+<body>
+    <label for=""> Password </label> 
+    <input type="password" name="" id="input">
+    <br> <br>
+    <label for=""> Show Password</label>
+    <input type="checkbox" name="" id="inputbtn" onclick="HideShow()">
+    
+    
+    <script>
+     let input1 = document.querySelector("#input");
+
+     function HideShow() {
+        if (input1.type=="password" ) {
+             input1.type= "hide";
+      
+            } else {
+            input1.type= "password";
+
+        }
+     }
+    </script>
+     
+</body>
+</html>

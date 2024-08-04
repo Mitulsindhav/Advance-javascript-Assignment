@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Question 2 Click me button in Alert Show  </title>
+    <style> 
+
+      .btn1{
+         padding: 10px 30px ;
+         border: 2px solid;
+         background-color: rgb(117, 85, 21);
+         color: white;
+         font-size:19px;
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+         box-shadow: 10px 10px 20px 5px rgb(107, 125, 71);
+         margin: 0px 20px;
+
+      }
+      .btn2{
+        padding: 10px 30px ;
+        border: 2px solid;
+        background-color: rgb(95, 63, 0);
+        color: white;
+        font-size:19px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 0px 20px;
+        box-shadow: 10px 10px 20px 5px rgb(121, 174, 14);
+
+     }
+     .btn3{
+      padding: 10px 30px ;
+      border: 2px solid;
+      background-color: rgb(158, 117, 41);
+      color: white;
+      font-size:19px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin: 0px 20px;
+      box-shadow: 10px 10px 20px 5px rgb(75, 102, 20);
+
+   }
+    </style>
+</head>
+<body>
+
+  <button class="btn1" onclick="oneclick()"> Button 1</button>
+  <button class="btn2" onclick="secondclick()"> Button 2</button>
+  <button class="btn3" onclick="threeclick()"> Button  3</button>
+
+  <script>
+
+    let button1 =  document.querySelectorAll('.btn1');
+    let button2 =  document.querySelectorAll('.btn2');
+    let button3 =  document.querySelectorAll('.btn3');
+  
+    function oneclick(){
+      alert("First Button Click ME ");
+    }
+
+    function secondclick(){
+      alert(" Second Button Click ME  ");
+    }
+
+    function threeclick(){
+      alert(" Three Button Click ME ");
+    }
+
+   
+  </script>
+    
+</body>
+</html>

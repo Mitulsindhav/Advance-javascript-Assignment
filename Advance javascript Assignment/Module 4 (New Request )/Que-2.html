@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Question 2 Promises </title>
+  </head>
+  <body>
+    <h3>Q.1.What is promises</h3>
+    <p>
+      In the context of programming, particularly in JavaScript, a promise is an
+      object that represents the eventual completion (or failure) of an
+      asynchronous operation and its resulting value.
+    </p>
+  
+    <p> Objective :To understand how to use promises in JavaScript.</p>
+   
+    <p>Rejected: The operation failed.</p>
+
+    <p>Prerequisites: A reasonable understanding of JavaScript fundamentals, including event handling.</p>
+   
+    <p>States: A promise can be in one of three states:</p>
+    
+    <p>Fulfilled: The operation completed successfully.</p>
+    
+    <p>Pending: The initial state; the operation is still ongoing.</p>
+
+    <script>
+     
+        function part1(par1) {
+        console.log(par1);
+      }
+
+      let MyPromise = new Promise((successfully, Failed) => {
+        if (!successfully) {
+          return successfully("successfully");
+        } else {
+          return Failed("Failed");
+        }
+      });
+      MyPromise.then(
+        (a) => {
+          part1(a);
+        },
+        (b) => {
+
+          part1(b);
+        }
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> Question 3 Responsive Header</title>
+        <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+            
+          }
+
+          header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+           background-color:rgb(137, 137, 137); 
+            border: 1.5px solid  rgba(255,255,255,0.18);
+            color: #000000;
+          }
+          .navbar {
+            display: flex;
+          }
+
+          .navbar ul {
+            list-style: none;
+            display: flex;
+          
+          }
+
+          .navbar ul li {
+            margin: 0 15px;
+          }
+
+          .navbar ul li a {
+            color:white;
+            font-size: 20px;
+            text-decoration: none;
+            position: relative;
+            margin-right: 20px;
+          }
+
+          .Toggle-Menu div {
+            height: 3px;
+            width: 25px;
+            background: black;
+            margin: 4px 0;
+            transition: all 0.3s;
+          }
+          .Toggle-Menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+          }
+
+         
+
+          a:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 100%;
+           background: rgb(255, 255, 255);     
+          transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.6s linear;
+          }
+          a:hover:before {
+            transform: scale(1);
+            transform-origin: left;
+           
+          }
+
+          @media (max-width: 768px) {
+            .navbar {
+              display: none;
+              flex-direction: column;
+              width: 50%;
+              position: absolute;
+              top: 57px;
+              right: 0;
+              background-color: black;
+              
+            }
+
+            .navbar ul {
+              flex-direction: column;
+            }
+
+            .navbar ul li {
+              margin: 15px 30px;
+               text-align: center; 
+            }
+
+            .Toggle-Menu {
+              display: flex;
+            }
+
+            .navbar.active {
+              display: flex;
+            }
+          }
+        
+        </style>
+      </head>
+      <body>
+        <header>
+          <img src="../image/logo.svg" alt="" />
+          <nav class="navbar">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href=""> Listing </a></li>
+              <li><a href="">User </a></li>
+              <li><a href="">Blog </a></li>
+              <li><a href=""> pages </a></li>
+              <li><a href=""> Contact</a></li>
+            </ul>
+          </nav>
+         
+          <div class="Toggle-Menu" id="Toggle-Menu">
+           <div></div>
+           <div></div>
+           <div></div>
+          </div>
+        </header>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+       
+            const Toggle_Menu = document.getElementById("Toggle-Menu");
+       
+            const navbar = document.querySelector(".navbar");
+       
+            Toggle_Menu.addEventListener("click", () => {
+       
+              navbar.classList.toggle("active");
+       
+            });
+       
+          });
+       
+        </script>
+      
+     
+  </body>
+</html>

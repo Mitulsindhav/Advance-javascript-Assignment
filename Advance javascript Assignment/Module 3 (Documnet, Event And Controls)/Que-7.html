@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Question 7  Form Submission</title>
+    <style>
+        input{
+            padding: 8px ;
+            border-radius: 5px;
+        }
+        label{
+            font-size: 19px;
+        }
+        button{
+            padding: 5px 30px;
+            border-radius: 8px;
+            margin-left: 60px;
+        }
+      
+    </style>
+  </head>
+  <body>
+    <form id="Form">
+
+        <label for=""> Details </label>
+      <input type="text" name="name" placeholder="Enter Your Details" required >
+      <br> <br>
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+     
+        document.addEventListener("DOMContentLoaded", () => {
+    
+            let  form = document.getElementById("Form");
+
+        form.addEventListener("submit", (event) => {
+      
+            event.preventDefault();
+
+          alert("Submit");
+    
+        });
+      
+    });
+
+    </script>
+  </body>
+</html>

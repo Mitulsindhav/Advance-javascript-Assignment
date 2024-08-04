@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Question 4 Form-Validate</title>
+   <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    display: flex;
+   align-items: center; 
+   background-color: rgb(223, 163, 223);
+   justify-content: center;
+  }
+  form {
+    width: 400px;
+    padding: 20px 20px;
+    margin-top: 80px;
+    border-radius: 15px;
+   box-shadow: 5px 5px 10px 10px rgb(175, 143, 143);
+   background-color:white;
+   border: 2px solid rgba(255, 255, 255, 0.368);
+  }
+  h2 {
+    margin-top: 5px;
+    margin-top: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center; 
+}
+  label {
+    display: block;
+    margin-top: 15px;
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+ 
+  button {
+    border: none;
+    margin-top: 15px;
+  }
+  ::placeholder{
+    font-size: 14px;
+  }
+  button {
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    background-color: #e0a42d;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  button,input,
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgb(11, 2, 103);
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+ 
+   </style>
+  </head>
+  <body>
+		<form action="">
+             
+              <h2>Form Validation</h2>
+          
+             <label for=""> Username Name:</label> 
+            <input type="text" name="" id="" class="User_input" placeholder="Enter your User-Name">
+              <span class="User_Error"></span>
+
+             <label for="">Email Address:</label> 
+            <input type="email" name="" id="" class="Email_input" placeholder="Enter your Email Address">
+            <span class="Email_Error"></span>
+
+            <label for="">Password:</label> 
+            <input type="password" name="" id="" class="Password_input" placeholder="Enter your password">
+            <span class="Password_Error"></span>
+
+            <label for=""> Date Of Birth :</label> 
+            <input type="date" name="" id="" class="Birthday_input">
+            <span class="Birthday_Error"></span>
+
+            <label for="">Gender:</label>
+            <select name="" id="" class="Gender_input">
+              <option value="" hidden >Select your Gender</option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+            </select>
+            <span class="Gender_Error"></span>
+
+            <button  onclick="return ShowError()">Submit</button>
+       
+       
+        </form>
+
+	     <script>
+     
+            let User_input = document.querySelector(".User_input")
+         let User_Error = document.querySelector(".User_Error")
+         
+         let Email_input = document.querySelector(".Email_input")
+         let Email_Error = document.querySelector(".Email_Error")
+
+         let Password_input = document.querySelector(".Password_input")
+         let Password_Error = document.querySelector(".Password_Error")
+
+         let Birthday_input = document.querySelector(".Birthday_input")
+         let Birthday_Error = document.querySelector(".Birthday_Error")
+         
+         let Gender_input = document.querySelector(".Gender_input")
+         let Gender_Error = document.querySelector(".Gender_Error") 
+
+        function ShowError() {
+      
+            if (User_input.value == "") {
+            User_input.style.border="2px solid red"
+            User_Error.innerHTML= "Feel This Enter Your User Name  !"
+            User_Error.style.color = "red"
+          }
+           else  {
+            User_Error.innerHTML = ""
+            User_input.style.border=""
+          } 
+
+          if (Email_input.value == "") {
+            Email_input.style.border="2px solid red"
+            Email_Error.innerHTML= "Feel This Enter Your Email ! "
+            Email_Error.style.color = "red"
+          } else  {
+            Email_Error.innerHTML = ""
+            Email_input.style.border=""
+          } 
+
+          if (Password_input.value == "") {
+            Password_input.style.border="2px solid red"
+            Password_Error.innerHTML= "Feel This Enter Your Password !"
+            Password_Error.style.color = "red"
+          } else  {
+            Password_Error.innerHTML = ""
+            Password_input.style.border= ""
+          } 
+
+          if (Birthday_input.value == "") {
+            Birthday_input.style.border="2px solid red"
+            Birthday_Error.innerHTML= "Feel This Enter Your Date Of Birth !"
+            Birthday_Error.style.color = "red"
+          } else  {
+            Birthday_Error.innerHTML = ""
+            Birthday_input.style.border= ""
+          } 
+
+          if (Gender_input.value == "") {
+            Gender_input.style.border="2px solid red"
+            Gender_Error.innerHTML= "Feel This Enter Your Gender !"
+            Gender_Error.style.color = "red"
+            
+
+          } else  {
+            Gender_Error.innerHTML = ""
+            Gender_input.style.border= ""
+          } 
+          return false
+        }
+       </script>
+             
+  </body>
+</html>
