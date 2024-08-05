@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>culculet subtotal price of quntity </title>
+    <style>
+        body {
+            text-align: center;
+           /* margin-left: 200px;*/
+           /* margin-top: 120px; */
+           
+        }
+
+        #price1 {
+            border: none;
+            text-align: center;
+           
+        }
+
+        #price2 {
+            border: none;
+            text-align: center;
+            
+        }
+
+        img {
+            height: 300px;
+            width: 300px;
+        }
+
+        .iphone12 {
+            display: flex;
+        }
+
+        .Apple {
+            display: flex;
+        }
+
+        p {
+            width: 300px;
+            padding-left: 20px;
+        } 
+
+        h2 {
+            padding-left: 20px;
+        }
+        button{
+            padding: 6px 30px;
+            border-radius: 8px;
+        }
+        #submit{
+            padding: 8px 30px;
+        }
+        input{
+            padding: 8px 30px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 2px solid rgb(134, 134, 190);
+            background-color: rgb(185, 211, 219);
+            
+        }
+        table{
+            background-color:rgb(219, 187, 218);
+        }
+        th{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 19px;
+        }
+    </style>
+</head>
+
+<body>
+ 
+    <h1> Calculate subtotal price of quantity in JavaScript </h1>
+    <table border="3">
+        <tr>
+            <th>
+                Product Details
+            </th>
+
+            <th>
+                Quntity
+            </th>
+            <th>
+                Price 
+            </th>
+            <th>
+                Total(Products)
+            </th>
+            <th>
+                Remove-total-Quntity
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="iphone12">
+                    <div> <img src="iphone 12.jpg" alt=""></div>
+                    <div>
+                        <h2>  iPhone 12 - Black</h2>
+                       
+                        <p><b> Brand</b> Apple </p>
+                        <p><b>Operating System</b>ios 14</p>
+                        <p><b> Memory Stored</b> 128GB</p>
+                        <p><b>CPU Speed </b> 3 GHz</p>
+                       
+                    </div>
+            </td>
+            </div>
+            <td>
+                <input type="number" id="item-quntity1" onchange="subtotal1()" min="0">
+            </td>
+            <td>
+                <input type="number" name="" id="item-price1" value="45000" readonly>
+            </td>
+            <td id="Ans1"></td>
+            <td>
+                <button onclick="btn1()">Remove</button>
+            </td>
+        </tr>
+
+        <!-- card-2  -->
+
+        <tr>
+            <td>
+                <div class="Apple">
+                    <div>
+                        <img src="iphone 13.jpg" alt="">
+                    </div>
+                    <div>
+                        <h2>iPhone 13 - RED</h2>
+                        <p><b> Brand</b> Apple </p>
+                        <p><b>Operating System</b>ios 14</p>
+                        <p><b>Memory Stored</b> 128GB</p>
+                        <p><b> Screen Size  </b> 6.1 Inches</p>
+                        <p><b>Resolution	</b> 4K</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <input type="number" id="item-quntity2" onchange="subtotal2()">
+            </td>
+            <td>
+                <input type="number" name="" id="item-price2" value="54600">
+            </td>
+            <td id="Ans2"></td>
+            <td>
+                <button onclick="btn2()">Remove</button>
+            </td>
+        </tr>
+
+        <!-- card 3 -->
+
+        
+        <tr>
+            <td>
+                <div class="Apple">
+                    <div>
+                        <img src="iphone 14.jpg" alt="">
+                    </div>
+                    <div>
+                        <h2> iPhone 14  - Purple</h2>
+                        <p><b> Brand</b> Apple </p>
+                        <p><b>Operating System</b>ios 14</p>
+                        <p><b>Memory Stored</b> 256GB</p>
+                        <p><b> Screen Size </b> 6.1 Inches</p>
+                        <p><b>Resolution</b> 4K</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <input type="number" id="item-quntity3" onchange="subtotal3()">
+            </td>
+            <td>
+                <input type="number" name="" id="item-price3" value="71090">
+            </td>
+            <td id="Ans3"></td>
+            <td>
+                <button onclick="btn3()">Remove</button>
+            </td>
+        </tr> 
+
+
+        <!-- card 4 -->
+
+
+
+        <tr>
+            <td>
+                <div class="Apple">
+                    <div>
+                        <img src="samsung altra.jpg" alt="">
+                    </div>
+                    <div>
+                        <h2>Samsung Galaxy S24 Ultra 5G - Titanium Gray</h2>
+                        <p><b> Brand</b> 	Samsung</p>
+                        <p><b>Operating System</b>Android14</p>
+                        <p><b>Ram Memory </b> 12GB</p>
+                        <p><b> Memory Stored  </b> 1024 GB</p>
+                        <p><b> Screen Size </b> 6.8 Inches</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <input type="number" id="item-quntity4" onchange="subtotal4()">
+            </td>
+            <td>
+                <input type="number" name="" id="item-price4" value="159999">
+            </td>
+            <td id="Ans4"></td>
+            <td>
+                <button onclick="btn4()">Remove</button>
+            </td>
+        </tr>
+
+
+        <!-- card 5  -->
+
+        <tr>
+            <td>
+                <div class="Apple">
+                    <div>
+                        <img src="iphone 15pro.jpg" alt="">
+                    </div>
+                    <div>
+                        <h2>iPhone 15 Pro (1 TB) - Black Titanium</h2>
+                        <p><b> Brand</b> Apple </p>
+                        <p><b>Operating System</b>ios 14</p>
+                        <p><b>Ram Memory </b> 1TB</p>
+                        <p><b> Screen Size </b> 6.1 Inches</p>
+                        <p><b>Model Name </b> iphone 15 pro</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <input type="number" id="item-quntity5" onchange="subtotal5()">
+            </td>
+            <td>
+                <input type="number" name="" id="item-price5" value="175300">
+            </td>
+            <td id="Ans5"></td>
+            <td>
+                <button onclick="btn5()">Remove</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td id="qtotal"></td>
+            <td> </td>
+            <td id="total"></td>
+            <td><button id="submit" onclick="submitbtn()">submit</button></td>
+        </tr>
+
+
+    </table>
+
+    <script>
+        price1 = document.getElementById('item-price1');
+        quntity1 = document.getElementById('item-quntity1');
+        btn = document.querySelectorAll('button')
+        price2 = document.getElementById('item-price2');
+        quntity2 = document.getElementById('item-quntity2');
+        Ans1 = document.getElementById('Ans1');
+        Ans2 = document.getElementById('Ans2'); 
+       Ans3 = document.getElementById('Ans3');
+        Ans4 = document.getElementById('Ans4');
+        Ans5 = document.getElementById('Ans5');
+        price3 = document.getElementById('item-price3');
+        quntity3 = document.getElementById('item-quntity3');
+        price4 = document.getElementById('item-price4');
+        quntity4 = document.getElementById('item-quntity4');
+        price5 = document.getElementById('item-price5');
+        quntity5 = document.getElementById('item-quntity5');
+
+        function subtotal1() {
+            document.getElementById('Ans1').innerHTML = price1.value *  quntity1.value
+            Ans1.style.visibility = "visible";
+
+        }
+
+        function subtotal2() {
+            document.getElementById('Ans2').innerHTML = price2.value *  quntity2.value
+            Ans2.style.visibility = "visible";
+        }
+       function subtotal3() {
+            document.getElementById('Ans3').innerHTML = price3.value *  quntity3.value
+            Ans3.style.visibility = "visible";
+        }
+        function subtotal4() {
+            document.getElementById('Ans4').innerHTML = price4.value *  quntity4.value
+            Ans4.style.visibility = "visible";
+        }
+
+        function subtotal5() {
+            document.getElementById('Ans5').innerHTML = price5.value *  quntity5.value
+            Ans5.style.visibility = "visible";
+        }
+
+        function btn1() {
+            quntity1.value = " ";
+            Ans1.style.visibility = "hidden";
+
+        }
+
+        function btn2() {
+            quntity2.value = " ";
+            Ans2.style.visibility = "hidden";
+
+        }
+        function btn3() {
+            quntity3.value = " ";
+            Ans3.style.visibility = "hidden";
+
+        }
+        function btn4() {
+            quntity4.value = " ";
+            Ans4.style.visibility = "hidden";
+
+        }
+        function btn5() {
+            quntity5.value = " ";
+            Ans5.style.visibility = "hidden";
+
+        }
+
+        function submitbtn() {
+     
+            let pricetotal=   document.getElementById('total').innerHTML = price2.value * quntity2.value + price1.value *  quntity1.value + price3.value *  quntity3.value  + price4.value *  quntity4.value + price5.value *  quntity5.value;  
+      
+         let  Quntitytotal = document.getElementById('qtotal').innerHTML = parseInt( quntity1.value) + parseInt( quntity2.value) + parseInt( quntity3.value) +  parseInt( quntity4.value) +  parseInt( quntity5.value);
+            console.log(typeof Quntitytotal);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4 Events </title>
+
+    <style>
+        button{
+            padding: 10px 30px;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <ol>
+       <b> Mouse :</b>
+     
+      <li> click </li>
+        <li> dblclick </li>
+        <li> enter,over</li>
+        <li> leave,out </li>
+        <li> move</li>
+   
+   <br>
+    <b>  Keyboard : </b>
+      
+        <li> keypress </li>
+        <li> keydown </li>
+        <li> keyup </li>
+    <br>    
+    <b>  Form : </b>
+       
+        <li>  submit </li>
+        <li>  change </li>
+         <li>  blur </li>
+         <li>  focus </li>
+    
+    <br>
+        <b>  Windows: </b>
+       
+        <li>  load </li>
+        <li> unload </li>
+        <li> resize </li>
+        <li> scroll </li>
+        </ol>
+    
+
+        <b id="result"></b>
+        
+    <button onclick=" Mouseevent()"> On Click </button>
+    <button ondblclick=" Mouseevent()">dblClick</button>
+    <button onmouseenter=" Mouseevent()"> Mouseenter </button>
+    <button onmouseover=" Mouseevent()">Mouseover</button>
+    <button onmouseleave=" Mouseevent()">Mouseleave</button>
+    <button onmouseout=" Mouseevent()">Mouseout</button>
+   
+    
+       <input type="text" name="" id="inp1" onkeypress="keybord()">
+     
+    <script>
+
+        function Mouseevent()
+        {
+           
+            document.getElementById('result').innerHTML =12354;
+            alert("Thank You");
+            
+        }
+        function keybord()
+        {
+            let keybord= document.getElementById('inp1');
+
+            alert("Keypress");
+
+            
+        }
+
+       
+
+    </script>
+        
+  
+</body>
+</html>
